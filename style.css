@@ -1,0 +1,201 @@
+/* Reset de estilos */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilos gerais */
+body {
+    font-family: 'Poppins', sans-serif;
+    color: #333;
+    line-height: 1.6;
+    padding: 20px;
+    animation: fadeIn 1s ease-out;
+    background: linear-gradient(45deg, #FFB6C1, #FF6347, #20B2AA, #4A90E2);
+    background-size: 400% 400%;
+    animation: backgroundAnimation 10s ease infinite;
+}
+
+/* Cabeçalho */
+header {
+    background: linear-gradient(45deg, #4A90E2, #5C6BC0);
+    color: white;
+    padding: 30px;
+    text-align: center;
+    border-radius: 12px;
+    margin-bottom: 30px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    animation: slideInFromTop 1s ease-out;
+}
+
+h1 {
+    font-family: 'Merriweather', serif;
+    font-size: 50px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+    animation: fadeInText 2s ease-in-out;
+}
+
+/* Seção de receita */
+.recipe, .preparation, .tips {
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+    margin-top: 25px;
+    animation: slideInFromLeft 1s ease-out;
+}
+
+h2 {
+    font-family: 'Merriweather', serif;
+    font-size: 30px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    color: #4A90E2;
+    border-bottom: 4px solid #4A90E2;
+    padding-bottom: 10px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    animation: fadeInText 1.5s ease-in-out;
+}
+
+/* Estilo para listas e itens */
+ul, ol {
+    margin-left: 30px;
+    margin-top: 10px;
+}
+
+li {
+    margin: 12px 0;
+    font-family: 'Poppins', sans-serif;
+    font-size: 20px;
+    padding-left: 10px;
+    position: relative;
+    animation: fadeInList 1s ease-in-out;
+}
+
+li::before {
+    content: "•";
+    color: #4A90E2;
+    font-size: 22px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    animation: scaleUp 1s ease-in-out;
+}
+
+/* Rodapé */
+footer {
+    text-align: center;
+    margin-top: 50px;
+    color: #888;
+    font-size: 14px;
+    animation: fadeInText 2s ease-in-out;
+}
+
+/* Estilos interativos */
+
+/* Efeito de hover em elementos interativos (links, botões, etc.) */
+a, button {
+    color: #4A90E2;
+    text-decoration: none;
+    transition: all 0.3s ease-in-out;
+    font-weight: 600;
+}
+
+/* Animação de escala e sombra para links e botões */
+a:hover, button:hover {
+    transform: scale(1.1);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Animação de foco para campos de input */
+input:focus, textarea:focus {
+    border-color: #4A90E2;
+    box-shadow: 0 0 8px rgba(74, 144, 226, 0.6);
+    transition: all 0.3s ease;
+}
+
+/* Animação para botão ativo */
+button:active {
+    transform: scale(0.98);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Animações */
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes slideInFromTop {
+    0% {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideInFromLeft {
+    0% {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInText {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInList {
+    0% {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes scaleUp {
+    0% {
+        transform: scale(0.5);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+@keyframes backgroundAnimation {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
